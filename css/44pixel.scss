@@ -11,6 +11,7 @@ $colorSecondary: #f72863;
 $colorSecondary2: darken($colorSecondary,15%);
 $colorDark: #0c0b0c;
 $colorDark2: #808080;
+$padding: 16px;
 /*------------------------- FONTS ---------------------------*/
 h1, h2, h3, h4, h6, label, input[type="submit"] {
 	font-family: $fontMain;
@@ -90,10 +91,10 @@ input[type="submit"]:hover {
 	background: white;
 	margin: auto;
 	max-width: 780px;
-	padding: 15px 16px 50px;
+	padding: 15px $padding 50px;
 	box-sizing: border-box;
 }
-.splash .inner {
+.splash > .inner {
 	max-width: 550px;
 	margin: auto;
 }
@@ -157,10 +158,35 @@ span.wpcf7-not-valid-tip, #mc_embed_signup div.mce_inline_error, #mce-success-re
 	box-sizing: border-box;
 }
 .beta-signup-form-wrapper {
-	margin: 30px auto 0;
+	margin: 60px auto 0;
 	text-align: left;
 }
-
+#beta-signup .top-wrapper {
+	background: url(/wp-content/uploads/2018/05/trendmatch-bg-03.jpg);
+	background-size: cover;
+	position: relative;
+	padding: 15px $padding 50px;
+	margin: -15px (-$padding) 40px;
+}
+#beta-signup .top-wrapper > .inner {
+	position: relative;
+}
+#beta-signup .top-wrapper::before {
+	content: "";
+	background: white;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: .7;
+}
+#beta-signup .bottom-wrapper {
+	margin: 0 -$padding;
+	padding: 0 $padding;
+	box-sizing: border-box;
+	background: white;
+}
 /*------------------------- RESPONSIVE ---------------------------*/
 
 @media(min-width:600px) {
@@ -180,7 +206,12 @@ span.wpcf7-not-valid-tip, #mc_embed_signup div.mce_inline_error, #mce-success-re
 		padding: 50px 0;
 	}
 	.beta-signup-form-wrapper {
-		margin: 50px auto 0;
+		margin: 30px auto 70px;
+	}
+	#beta-signup .top-wrapper {
+		background: none;
+		padding: 0;
+		margin: 0;
 	}
 	/*------------------------- LOGO WRAPPER ---------------------------*/
 	.logo-wrapper {
