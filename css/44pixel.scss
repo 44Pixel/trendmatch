@@ -12,6 +12,9 @@ $colorSecondary2: darken($colorSecondary,15%);
 $colorDark: #0c0b0c;
 $colorDark2: #808080;
 $padding: 16px;
+
+$widthMain: 1100px;
+$widthWide: 1300px;
 /*------------------------- FONTS ---------------------------*/
 h1, h2, h3, h4, h6, label, input[type="submit"] {
 	font-family: $fontMain;
@@ -83,9 +86,45 @@ input[type="submit"]:hover {
 	color: $colorDark;
 }
 /*------------------------- SECTION STYLING ---------------------------*/
+.container {
+	width: 100%;
+	max-width: $widthMain;
+	margin: auto;
+}
+.container.wide {
+	max-width: $widthWide;
+}
 .center-content {
 	text-align: center;
 }
+.flex-wrapper {
+	display: flex;
+}
+.flex-wrapper.col3 > .item {
+	width: 33.3333%;
+}
+/*------------------------- ÍMAGES + MOCKUP ---------------------------*/
+.mockup {
+	width: 100%;
+	position: relative;
+}
+.mockup img{
+	width: 100%;
+}
+.mockup .content{
+	position: absolute;
+    width: 69%;
+    height: 68.6%;
+    background: red;
+    top: 10.7%;
+    left: 14.4%;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.mockup .content.video video {
+	width: 100%;
+}
+
 /*------------------------- SPLASH ---------------------------*/
 .splash {
 	background: white;
@@ -200,10 +239,13 @@ span.wpcf7-not-valid-tip, #mc_embed_signup div.mce_inline_error, #mce-success-re
 	.splash {
 		padding: 50px 50px 70px;
 	}
+	/*------------------------- SECTION STYLING ---------------------------*/
+	section {
+		padding: 50px 0;
+	}
 	/*------------------------- SECTION: BETA SIGNUP ---------------------------*/
 	#beta-signup.hero {
 		background: url(/wp-content/uploads/2018/05/trendmatch-bg-03.jpg);
-		padding: 50px 0;
 	}
 	.beta-signup-form-wrapper {
 		margin: 30px auto 70px;

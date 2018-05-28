@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body {
   margin: 0; }
 
@@ -73,8 +74,43 @@ input[type="submit"]:hover {
   color: #0c0b0c; }
 
 /*------------------------- SECTION STYLING ---------------------------*/
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto; }
+
+.container.wide {
+  max-width: 1300px; }
+
 .center-content {
   text-align: center; }
+
+.flex-wrapper {
+  display: flex; }
+
+.flex-wrapper.col3 > .item {
+  width: 33.3333%; }
+
+/*------------------------- ÍMAGES + MOCKUP ---------------------------*/
+.mockup {
+  width: 100%;
+  position: relative; }
+
+.mockup img {
+  width: 100%; }
+
+.mockup .content {
+  position: absolute;
+  width: 69%;
+  height: 68.6%;
+  background: red;
+  top: 10.7%;
+  left: 14.4%;
+  border-radius: 3px;
+  overflow: hidden; }
+
+.mockup .content.video video {
+  width: 100%; }
 
 /*------------------------- SPLASH ---------------------------*/
 .splash {
@@ -188,10 +224,13 @@ span.wpcf7-not-valid-tip, #mc_embed_signup div.mce_inline_error, #mce-success-re
   .splash {
     padding: 50px 50px 70px; }
 
+  /*------------------------- SECTION STYLING ---------------------------*/
+  section {
+    padding: 50px 0; }
+
   /*------------------------- SECTION: BETA SIGNUP ---------------------------*/
   #beta-signup.hero {
-    background: url(/wp-content/uploads/2018/05/trendmatch-bg-03.jpg);
-    padding: 50px 0; }
+    background: url(/wp-content/uploads/2018/05/trendmatch-bg-03.jpg); }
 
   .beta-signup-form-wrapper {
     margin: 30px auto 70px; }
