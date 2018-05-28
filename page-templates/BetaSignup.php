@@ -30,6 +30,40 @@
 			</div>
 		</div>
 	</section>
+	
+	<section id="app-preview">
+		<div class="container">
+			<div class="flex-wrapper col3">
+				<div class="item">
+					<div class="inner">
+						<h3>Swipe styles</h3>
+						<p>Swipe stylesLorem ipsum orem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
+						<p>Nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad </p>
+						<p>Minim veniam, quis nostrud exerci tation ullamcorper suscipitconsequat. </p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="inner">
+						<div class="mockup iphone-portrait">
+							<img src="/wp-content/uploads/2018/05/iPhone-Single-Mockup.png">
+							<div class="content">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="inner">
+						<h3>Swipe styles</h3>
+						<p>Swipe stylesLorem ipsum orem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
+						<p>Nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad </p>
+						<p>Minim veniam, quis nostrud exerci tation ullamcorper suscipitconsequat. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
 </div>
          
 <?php get_footer(betaSignup); ?>
