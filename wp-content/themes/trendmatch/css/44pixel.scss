@@ -1,0 +1,277 @@
+html, body {
+	margin: 0;
+}
+/*------------------------- VARIABLES---------------------------*/
+$fontMain: Poppins, Montserrat, sans-serif;
+$fontSecondary: Montserrat, Poppins, sans-serif;
+
+$colorMain: #27EEAB;
+$colorMain2: darken($colorMain,15%);
+$colorSecondary: #f72863;
+$colorSecondary2: darken($colorSecondary,15%);
+$colorDark: #0c0b0c;
+$colorDark2: #808080;
+$padding: 16px;
+
+$widthMain: 1100px;
+$widthWide: 1300px;
+/*------------------------- FONTS ---------------------------*/
+h1, h2, h3, h4, h6, label, input[type="submit"] {
+	font-family: $fontMain;
+}
+p, input, #mc_embed_signup div.response, a {
+	font-family: $fontSecondary
+}
+h2 {
+	font-size: 22px;
+	font-weight: 500;
+	color: red;
+	margin-bottom: 20px;
+}
+html, body, p {
+	font-size: 16px;
+	font-weight: 300;
+	color: $colorDark2;
+	line-height: 1.6;
+}
+p:not(:last-of-type) {
+	margin-bottom: 20px;
+}
+a {
+	font-size: 16px;
+	font-weight: 400;
+	color: $colorMain2;
+	line-height: 1.6;
+	text-decoration: underline;
+}
+a:hover {
+	color: $colorSecondary;
+}
+label {
+	font-weight: 500;
+	display: block;
+	margin-bottom: 5px;
+	color: $colorDark;
+}
+/*------------------------- CTAS & BUTTONS ---------------------------*/
+input[type="submit"] {
+	letter-spacing: .7px;
+	color: white;
+	text-transform: uppercase;
+	background: $colorSecondary;
+	height: 45px;
+	padding: 0;
+	border: none;
+	cursor: pointer;
+	-webkit-appearance: none;
+}
+input[type="submit"]:hover {
+	background: $colorSecondary2;
+}
+/*------------------------- LOGO WRAPPER ---------------------------*/
+.logo-wrapper {
+	margin-bottom: 20px;
+}
+.logo-wrapper img.logo {
+	width: 45px;
+	display: block;
+	margin: 0 auto 5px;
+}
+.logo-wrapper h1.logo {
+	text-align: center;
+	font-size: 14px;
+	font-weight: 600;
+	margin: 0;
+	text-shadow: none;
+	color: $colorDark;
+}
+/*------------------------- SECTION STYLING ---------------------------*/
+.container {
+	width: 100%;
+	max-width: $widthMain;
+	margin: auto;
+}
+.container.wide {
+	max-width: $widthWide;
+}
+.center-content {
+	text-align: center;
+}
+.flex-wrapper {
+	display: flex;
+}
+.flex-wrapper.col3 > .item {
+	width: 33.3333%;
+}
+/*------------------------- ÍMAGES + MOCKUP ---------------------------*/
+.mockup {
+	width: 100%;
+	position: relative;
+}
+.mockup img{
+	width: 100%;
+}
+.mockup .content{
+	position: absolute;
+    width: 69%;
+    height: 68.6%;
+    background: red;
+    top: 10.7%;
+    left: 14.4%;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.mockup .content.video video {
+	width: 100%;
+}
+
+/*------------------------- SPLASH ---------------------------*/
+.splash {
+	background: white;
+	margin: auto;
+	max-width: 780px;
+	padding: 15px $padding 50px;
+	box-sizing: border-box;
+}
+.splash > .inner {
+	max-width: 550px;
+	margin: auto;
+}
+/*------------------------- FORMS & INPUT ---------------------------*/
+input {
+	font-size: 16px;
+	font-weight: 400;
+	color: $colorDark;
+	padding-left: 10px;
+	border-radius: 3px;
+	border-color: $colorDark2;
+	border-width: 1px;
+	height: 40px;
+	box-sizing: border-box;
+}
+input:hover {
+	border-color: $colorDark;
+}
+input:not(:last-of-type) {
+	margin: 0 auto 20px;
+	max-width: 360px;
+}
+input,input[type="submit"],.mc4wp-form-fields {
+	width: 100%;
+	max-width: 360px;
+	margin: auto;
+	display: block;
+}
+#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+	margin-top: 3px !important;
+}
+#mc_embed_signup div#mce-responses {
+	float: none;
+	text-align: center;
+	margin: -20px auto 20px;
+	width: 100%;
+    padding: 0;
+}
+#mc_embed_signup div.response {
+	float: none;
+	margin: 0 auto;
+}
+span.wpcf7-not-valid-tip, #mc_embed_signup div.mce_inline_error, #mce-success-response {
+	position: static;
+	margin: auto!important;
+	font-weight: 500 !important;
+	color: $colorDark2;
+}
+.mc4wp-response {
+	text-align: center;
+	margin-top: 20px;
+}
+.mc4wp-response p {
+	font-weight: 500;
+}
+/*------------------------- SECTION: BETA SIGNUP ---------------------------*/
+#beta-signup.hero {
+	background: white;
+	background-size: cover;
+	min-height: 100vh;
+	box-sizing: border-box;
+}
+.beta-signup-form-wrapper {
+	margin: 60px auto 0;
+	text-align: left;
+}
+#beta-signup .top-wrapper {
+	background: url(/wp-content/uploads/2018/05/trendmatch-bg-03.jpg);
+	background-size: cover;
+	position: relative;
+	padding: 15px $padding 50px;
+	margin: -15px (-$padding) 40px;
+}
+#beta-signup .top-wrapper > .inner {
+	position: relative;
+}
+#beta-signup .top-wrapper::before {
+	content: "";
+	background: white;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: .7;
+}
+#beta-signup .bottom-wrapper {
+	margin: 0 -$padding;
+	padding: 0 $padding;
+	box-sizing: border-box;
+	background: white;
+}
+/*------------------------- RESPONSIVE ---------------------------*/
+
+@media(min-width:600px) {
+	
+	/*------------------------- FONTS ---------------------------*/
+	h2 {
+		font-size: 36px;
+		margin-bottom: 40px;
+	}
+	/*------------------------- SPLASH ---------------------------*/
+	.splash {
+		padding: 50px 50px 70px;
+	}
+	/*------------------------- SECTION STYLING ---------------------------*/
+	section {
+		padding: 50px 0;
+	}
+	/*------------------------- SECTION: BETA SIGNUP ---------------------------*/
+	#beta-signup.hero {
+		background: url(/wp-content/uploads/2018/05/trendmatch-bg-03.jpg);
+	}
+	.beta-signup-form-wrapper {
+		margin: 30px auto 70px;
+	}
+	#beta-signup .top-wrapper {
+		background: none;
+		padding: 0;
+		margin: 0;
+	}
+	/*------------------------- LOGO WRAPPER ---------------------------*/
+	.logo-wrapper {
+		margin-bottom: 30px;
+	}
+	.logo-wrapper img.logo {
+		width: 90px;
+	}
+	.logo-wrapper h1.logo {
+		font-size: 20px;
+	}
+	/*------------------------- FORMS & INPUT ---------------------------*/
+	.mc-field-group,input:not(:last-of-type) {
+		margin: 0 auto 30px;
+	}
+	
+}
+
+@media(min-width:1024px) {
+	
+}

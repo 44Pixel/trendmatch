@@ -25,6 +25,7 @@
 				<div class="bottom-wrapper">
 					<p>Vi søger op mod 100 testere, til en lukket beta. Deltagere vil være blandt de første der kan <strong>downloade og benytte app'en</strong>.</p>
 					<p>Til gengæld ønsker vi din feedback, så vi kan skræddersy Trendmatch til dig og vores andre brugere. Det er altså din mulighed for at påvirke udviklingen af trendmatch til netop dine ønsker.</p>
+					<a class="button ghost">Se appen</a>
 				</div>
 				
 			</div>
@@ -32,11 +33,11 @@
 	</section>
 	
 	<section id="app-preview">
-		<div class="container wide">
-			<div class="flex-wrapper col3">
+		<div class="container">
+			<div class="flex-wrapper col2 align-middle img-right">
 				<div class="item">
 					<div class="inner">
-						<h3>Swipe styles</h3>
+						<h2>Find nyt tøj et swipe af gangen</h2>
 						<p>Swipe stylesLorem ipsum orem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
 						<p>Nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad </p>
 						<p>Minim veniam, quis nostrud exerci tation ullamcorper suscipitconsequat. </p>
@@ -47,17 +48,9 @@
 						<div class="mockup iphone-portrait">
 							<img src="/wp-content/uploads/2018/05/iPhone-Single-Mockup.png">
 							<div class="content video">
-						  		<video loop autoplay poster="/wp-content/uploads/2018/05/trendmatch-app-preview-video-placeholder.jpg" src="/wp-content/uploads/2018/05/ScreenRecording_05-28-2018-10-41-34.mp4"></video>
+						  		<video muted loop autoplay poster="/wp-content/uploads/2018/05/trendmatch-app-preview-video-placeholder.jpg" src="/wp-content/uploads/2018/05/ScreenRecording_05-28-2018-10-41-34.mp4"></video>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="inner">
-						<h3>Swipe styles</h3>
-						<p>Swipe stylesLorem ipsum orem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
-						<p>Nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad </p>
-						<p>Minim veniam, quis nostrud exerci tation ullamcorper suscipitconsequat.</p>
 					</div>
 				</div>
 			</div>

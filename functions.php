@@ -2,8 +2,8 @@
 
 function pixel44_script_enqueue() {
 	
-	wp_enqueue_style( 'customstyle', get_template_directory_uri() . '/css/44pixel.css', array(), filemtime( get_template_directory() . '/css/44pixel.css' ) ); 
-	wp_enqueue_script('customjs', get_template_directory_uri() . '/js/44pixel.js' , array('jquery'), filemtime( get_template_directory() . '/js/44pixel.js' ) );
+	wp_enqueue_style( 'customstyle', get_template_directory_uri() . '/css/trendmatch.css', array(), filemtime( get_template_directory() . '/css/trendmatch.css' ) ); 
+	wp_enqueue_script('customjs', get_template_directory_uri() . '/js/trendmatch.js' , array('jquery'), filemtime( get_template_directory() . '/js/trendmatch.js' ) );
 	wp_enqueue_script('jquery');
 	
 	// Template for getting Google Fonts

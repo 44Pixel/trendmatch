@@ -1,0 +1,359 @@
+@charset "UTF-8";
+html, body {
+  margin: 0; }
+
+/*------------------------- VARIABLES---------------------------*/
+/*------------------------- FONTS ---------------------------*/
+h1, h2, h3, h4, h6, label, input[type="submit"], .navbar-wrapper li a {
+  font-family: Poppins, Montserrat, sans-serif; }
+
+p, input, #mc_embed_signup div.response, a {
+  font-family: Montserrat, Poppins, sans-serif; }
+
+h2 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #0c0b0c;
+  margin-bottom: 20px; }
+
+html, body, p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #808080;
+  line-height: 1.6; }
+
+p:not(:last-of-type) {
+  margin-bottom: 20px; }
+
+a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #0fba80;
+  line-height: 1.6;
+  text-decoration: underline; }
+
+a:hover {
+  color: #f72863; }
+
+label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+  color: #0c0b0c; }
+
+/*------------------------- CTAS & BUTTONS ---------------------------*/
+input[type="submit"] {
+  letter-spacing: .7px;
+  color: white;
+  text-transform: uppercase;
+  background: #f72863;
+  height: 45px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  -webkit-appearance: none; }
+
+input[type="submit"]:hover {
+  background: #cb083f; }
+
+.button {
+  margin: auto;
+  display: block;
+  max-width: 400px;
+  width: 100%;
+  height: 45px;
+  box-sizing: border-box;
+  cursor: pointer;
+  line-height: 45px;
+  text-decoration: none; }
+
+.underline-hover, .navbar-wrapper li a {
+  position: relative; }
+
+.underline-hover::after, .navbar-wrapper li a::after {
+  content: "";
+  width: 100%;
+  border-bottom: solid 1px;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  opacity: 0;
+  transition: .3s; }
+
+.underline-hover:hover::after, .navbar-wrapper li a:hover::after {
+  bottom: 0px;
+  opacity: 1; }
+
+/*------------------------- LOGO WRAPPER ---------------------------*/
+.logo-wrapper {
+  margin-bottom: 20px; }
+
+.logo-wrapper img.logo {
+  width: 45px;
+  display: block;
+  margin: 0 auto 5px; }
+
+.logo-wrapper h1.logo {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: none;
+  color: #0c0b0c; }
+
+/*------------------------- SECTION STYLING ---------------------------*/
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  box-sizing: border-box;
+  padding-left: 50px;
+  padding-right: 50px; }
+
+.container.wide {
+  max-width: 1400px; }
+
+.center-content {
+  text-align: center; }
+
+.content-right {
+  margin-left: auto; }
+
+.align-middle {
+  align-items: center; }
+
+.flex-wrapper {
+  display: flex;
+  flex-direction: column; }
+
+.flex-wrapper .item {
+  width: 100%;
+  box-sizing: border-box; }
+
+/*------------------------- HERO ---------------------------*/
+.hero {
+  padding-top: 50px; }
+
+/*------------------------- ÍMAGES + MOCKUP ---------------------------*/
+.mockup {
+  width: 100%;
+  position: relative; }
+
+.mockup img {
+  width: 100%; }
+
+.mockup .content {
+  position: absolute;
+  width: 68.8%;
+  height: 68.6%;
+  top: 10.7%;
+  left: 14.5%;
+  border-radius: 3px;
+  overflow: hidden; }
+
+.mockup .content.video video {
+  width: 100%; }
+
+.mockup.iphone-portrait .content.video video {
+  width: 102.5%;
+  margin-top: -5.7%; }
+
+.mockup.iphone-portrait {
+  max-width: 400px; }
+
+/*------------------------- NAVBAR ---------------------------*/
+.navbar-wrapper {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  box-sizing: border-box; }
+
+.navbar-wrapper img.logo {
+  max-width: 200px;
+  display: block; }
+
+.navbar-wrapper ul {
+  margin: 0; }
+
+.navbar-wrapper li {
+  list-style: none;
+  display: block;
+  float: left;
+  padding-left: 50px; }
+
+.navbar-wrapper li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+/*------------------------- SPLASH ---------------------------*/
+.splash {
+  background: white;
+  margin: auto;
+  max-width: 780px;
+  padding: 15px 16px 50px;
+  box-sizing: border-box; }
+
+.splash > .inner {
+  max-width: 550px;
+  margin: auto; }
+
+/*------------------------- FORMS & INPUT ---------------------------*/
+input {
+  font-size: 16px;
+  font-weight: 400;
+  color: #0c0b0c;
+  padding-left: 10px;
+  border-radius: 3px;
+  border-color: #808080;
+  border-width: 1px;
+  height: 40px;
+  box-sizing: border-box; }
+
+input:hover {
+  border-color: #0c0b0c; }
+
+input:not(:last-of-type) {
+  margin-bottom: 20px;
+  max-width: 360px; }
+
+input, input[type="submit"], .mc4wp-form-fields {
+  width: 100%;
+  max-width: 360px; }
+
+.center-content input, .center-content input[type="submit"], .center-content .mc4wp-form-fields {
+  margin: auto; }
+
+#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+  margin-top: 3px !important; }
+
+#mc_embed_signup div#mce-responses {
+  float: none;
+  text-align: center;
+  margin: -20px auto 20px;
+  width: 100%;
+  padding: 0; }
+
+#mc_embed_signup div.response {
+  float: none;
+  margin: 0 auto; }
+
+span.wpcf7-not-valid-tip, #mc_embed_signup div.mce_inline_error, #mce-success-response {
+  position: static;
+  margin: auto !important;
+  font-weight: 500 !important;
+  color: #808080; }
+
+.mc4wp-response {
+  text-align: center;
+  margin-top: 20px; }
+
+.mc4wp-response p {
+  font-weight: 500; }
+
+/*------------------------- SECTION: BETA SIGNUP ---------------------------*/
+#beta-signup.hero {
+  min-height: 100vh;
+  box-sizing: border-box; }
+
+.beta-signup-form-wrapper {
+  margin: 60px auto 0;
+  text-align: left; }
+
+#beta-signup .top-wrapper {
+  background: url(/wp-content/uploads/2018/05/trendmatch-bg-03.jpg);
+  background-size: cover;
+  position: relative;
+  padding: 15px 16px 50px;
+  margin: -15px -16px 40px; }
+
+#beta-signup .top-wrapper > .inner {
+  position: relative; }
+
+#beta-signup .top-wrapper::before {
+  content: "";
+  background: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .7; }
+
+#beta-signup .bottom-wrapper {
+  margin: -16px;
+  padding: 0 16px;
+  box-sizing: border-box;
+  background: white; }
+
+/*------------------------- RESPONSIVE ---------------------------*/
+@media (max-width: 1023px) {
+  .desktop-only {
+    display: none !important; } }
+@media (min-width: 600px) {
+  /*------------------------- FONTS ---------------------------*/
+  h2 {
+    font-size: 36px;
+    margin-bottom: 40px; }
+
+  /*------------------------- SPLASH ---------------------------*/
+  .splash {
+    padding: 50px 50px 70px; }
+
+  /*------------------------- SECTION STYLING ---------------------------*/
+  section {
+    padding: 50px 0; }
+
+  .flex-wrapper {
+    flex-direction: row; }
+
+  .flex-wrapper.col3 > .item {
+    width: 33.3333%; }
+
+  .flex-wrapper.col2 > .item {
+    width: 50%; }
+
+  .img-right > .item:nth-child(2) {
+    padding-left: 100px; }
+
+  /*------------------------- HERO ---------------------------*/
+  .hero {
+    padding-top: 150px; }
+
+  /*------------------------- ÍMAGES + MOCKUP ---------------------------*/
+  .content-right.mockup.iphone-portrait {
+    margin-right: -55px; }
+
+  /*------------------------- SECTION: BETA SIGNUP ---------------------------*/
+  .beta-signup-form-wrapper {
+    margin: 30px auto 70px; }
+
+  #beta-signup .top-wrapper {
+    background: none;
+    padding: 0;
+    margin: 0; }
+
+  /*------------------------- LOGO WRAPPER ---------------------------*/
+  .logo-wrapper {
+    margin-bottom: 30px; }
+
+  .logo-wrapper img.logo {
+    width: 90px; }
+
+  .logo-wrapper h1.logo {
+    font-size: 20px; }
+
+  /*------------------------- FORMS & INPUT ---------------------------*/
+  .mc-field-group, input:not(:last-of-type) {
+    margin-bottom: 30px; } }
+@media (min-width: 1024px) {
+  /*------------------------- MOBILE ONLY ---------------------------*/
+  .mobile-only {
+    display: none !important; } }

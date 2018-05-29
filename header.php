@@ -35,7 +35,8 @@
 	<div class="site-wrapper">
 		
 		<!-- NAV BAR --> 
-		<div class="navbar-wrapper">
+		<div class="navbar-wrapper container">
+			<img class="logo" src="/wp-content/uploads/2018/05/trendmatch-logo-color-horizontal.svg">
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'main-menu',
