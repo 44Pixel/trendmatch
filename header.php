@@ -34,13 +34,22 @@
 		
 	<div class="site-wrapper">
 		
-		<!-- NAV BAR --> 
-		<div class="navbar-wrapper container">
-			<img class="logo" src="/wp-content/uploads/2018/05/trendmatch-logo-color-horizontal.svg">
+		<!-- NAV BAR -->
+		
+		<div class="navbar-wrapper container desktop-only">
+			<a class="logo" href="/">
+				<img src="/wp-content/uploads/2018/05/trendmatch-logo-color-horizontal.svg">
+			</a>
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'main-menu',
 					'container_class' => 'navbar' ) );
 			?>
+		</div>
+		
+		<div class="navbar-wrapper container mobile-only">
+			<a class="logo" href="/">
+				<img src="/wp-content/uploads/2018/05/trendmatch-logo-white.png">	
+			</a>
 		</div>
 		<!-- NAV BAR ENDS -->
