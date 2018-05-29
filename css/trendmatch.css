@@ -109,6 +109,9 @@ input[type="submit"]:hover {
   opacity: 1; }
 
 /*------------------------- SECTION STYLING ---------------------------*/
+.site-wrapper {
+  overflow: hidden; }
+
 section {
   box-sizing: border-box; }
 
@@ -214,11 +217,11 @@ section {
   width: 100%;
   left: 0;
   right: 0;
-  top: 20px;
+  top: 10px;
   box-sizing: border-box; }
 
 .navbar-wrapper.mobile-only + .page-wrapper > section:first-of-type {
-  padding-top: 130px; }
+  padding-top: 95px; }
 
 .navbar-wrapper a.logo {
   display: block;
@@ -232,7 +235,7 @@ section {
 
 .navbar-wrapper.mobile-only a.logo img {
   width: auto;
-  height: 90px;
+  height: 70px;
   margin: auto; }
 
 .navbar-wrapper ul {
@@ -298,7 +301,8 @@ input, input[type="submit"], .mc4wp-form-fields {
 
 #beta-signup .item:nth-child(2) {
   position: relative;
-  margin-top: 40px; }
+  margin-top: 40px;
+  margin-bottom: 70px; }
 
 #beta-signup .item:nth-child(2)::before {
   content: "";
@@ -389,6 +393,7 @@ input, input[type="submit"], .mc4wp-form-fields {
     content: none; }
 
   #beta-signup .item:nth-child(2) {
+    margin-bottom: 0;
     position: static;
     margin-top: 0;
     order: -1; }
