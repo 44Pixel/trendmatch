@@ -220,9 +220,6 @@ section {
   top: 10px;
   box-sizing: border-box; }
 
-.navbar-wrapper.mobile-only + .page-wrapper > section:first-of-type {
-  padding-top: 95px; }
-
 .navbar-wrapper a.logo {
   display: block;
   width: 100%;
@@ -327,7 +324,10 @@ input, input[type="submit"], .mc4wp-form-fields {
     color: #0c0b0c; }
   #beta-signup .item:nth-child(2) p {
     color: #808080;
-    font-weight: 400; } }
+    font-weight: 400; }
+
+  .navbar-wrapper.mobile-only + .page-wrapper > section:first-of-type {
+    padding-top: 95px; } }
 @media (max-width: 1023px) {
   .desktop-only {
     display: none !important; } }

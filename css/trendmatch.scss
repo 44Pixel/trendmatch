@@ -238,9 +238,6 @@ section {
 	top: 10px;
 	box-sizing: border-box;
 }
-.navbar-wrapper.mobile-only + .page-wrapper > section:first-of-type {
-	padding-top: 95px;
-}
 .navbar-wrapper a.logo {
 	display: block;
 	width: 100%;
@@ -349,6 +346,9 @@ input, input[type="submit"], .mc4wp-form-fields {
 			color: $colorDark2;
 			font-weight: 400;
 		}
+	}
+	.navbar-wrapper.mobile-only + .page-wrapper > section:first-of-type {
+		padding-top: 95px;
 	}
 }
 @media(max-width:1023px) {
