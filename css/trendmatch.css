@@ -11,7 +11,7 @@ p, input, #mc_embed_signup div.response, a {
   font-family: Montserrat, Poppins, sans-serif; }
 
 h1 {
-  font-size: 22px;
+  font-size: 45px;
   font-weight: 400;
   color: #0c0b0c;
   margin-bottom: 20px;
@@ -56,7 +56,7 @@ label {
 
 .white-text h1, .white-text h2, .white-text h3, .white-text h4, .white-text h5, .white-text html, .white-text body, .white-text p, .white-text a, .white-text label {
   color: white; }
-.white-text p, .white-text a {
+.white-text p, .white-text a:not(.button) {
   font-weight: 500; }
 .white-text a:hover {
   opacity: .9; }
@@ -85,7 +85,31 @@ input[type="submit"]:hover {
   box-sizing: border-box;
   cursor: pointer;
   line-height: 45px;
-  text-decoration: none; }
+  text-decoration: none;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+.button:last-of-type {
+  margin-top: -10px; }
+
+.button.rounded {
+  border-radius: 25px; }
+
+.button.full {
+  background: #27EEAB;
+  color: white;
+  font-weight: 600; }
+
+.button.full:hover {
+  background: #0fba80; }
+
+.button.ghost {
+  color: #0fba80;
+  border: solid 1px; }
+
+.button.ghost:hover {
+  background: rgba(255, 255, 255, 0.2); }
 
 .underline-hover:hover, .navbar-wrapper li a:hover {
   color: #09734f; }
@@ -120,14 +144,17 @@ section {
   max-width: 1200px;
   margin: auto;
   box-sizing: border-box;
-  padding-left: 50px;
-  padding-right: 50px; }
+  padding-left: 10%;
+  padding-right: 10%; }
 
 .container.wide {
   max-width: 1400px; }
 
 .banner {
-  padding: 50px 0; }
+  padding: 50px 0;
+  box-sizing: border-box;
+  padding-left: 10%;
+  padding-right: 10%; }
 
 .banner > .inner {
   margin: auto;
@@ -136,22 +163,21 @@ section {
 .notice {
   padding: 20px 20px 30px;
   box-sizing: border-box;
-  background: #0fba80;
+  background: #09734f;
   margin-top: 50px; }
 
 .notice h3 {
   margin-top: 0; }
 
 .partners {
-  padding-top: 0;
-  margin-top: -50px; }
+  padding-top: 0; }
 
 .partners img {
   margin-top: 40px;
   max-width: 250px; }
 
 .color-bg {
-  background: #27EEAB; }
+  background: #0fba80; }
 
 .full-height {
   min-height: 100vh; }
@@ -163,9 +189,6 @@ section {
 .flex-wrapper .item {
   width: 100%;
   box-sizing: border-box; }
-
-.overlap-top {
-  margin-top: -200px; }
 
 /*------------------------- ALIGNMENT ---------------------------*/
 .center-content {
@@ -180,9 +203,6 @@ section {
   align-items: center; }
 
 /*------------------------- HERO ---------------------------*/
-.hero {
-  padding-top: 50px; }
-
 /*------------------------- ÍMAGES + MOCKUP ---------------------------*/
 .mockup {
   width: 100%;
@@ -213,12 +233,10 @@ section {
 
 /*------------------------- NAVBAR ---------------------------*/
 .navbar-wrapper {
-  position: absolute;
   width: 100%;
-  left: 0;
-  right: 0;
-  top: 10px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-bottom: 10px; }
 
 .navbar-wrapper a.logo {
   display: block;
@@ -287,15 +305,12 @@ input, input[type="submit"], .mc4wp-form-fields {
   margin-top: 20px; }
 
 .mc4wp-response p {
-  font-weight: 500; }
+  font-weight: 500 !important; }
 
 .inline-submit {
   margin-top: 20px; }
 
 /*------------------------- SECTION: BETA SIGNUP ---------------------------*/
-#beta-signup.hero {
-  background: #27EEAB; }
-
 #beta-signup .item:nth-child(2) {
   position: relative;
   margin-top: 40px;
@@ -319,19 +334,90 @@ input, input[type="submit"], .mc4wp-form-fields {
   text-align: left; }
 
 /*------------------------- RESPONSIVE ---------------------------*/
-@media (max-width: 599px) {
-  #beta-signup .item:nth-child(2) h1, #beta-signup .item:nth-child(2) h3 {
+/*------------------------- MOBILE CSS ONLY ---------------------------*/
+@media (max-width: 749px) {
+  /*------------------------- DESKTOP ONLY ---------------------------*/
+  .desktop-only {
+    display: none !important; }
+
+  /*------------------------- FOR WEBSHOPS ---------------------------*/
+  #webshops .banner {
+    padding-top: 20px; }
+
+  #webshops .banner .center-content h1 {
+    text-align: left; }
+
+  #partners {
+    padding-bottom: 70px; }
+
+  /*------------------------- MISC ---------------------------*/
+  #beta-signup h1, #beta-signup h3 {
     color: #0c0b0c; }
-  #beta-signup .item:nth-child(2) p {
+  #beta-signup p {
     color: #808080;
     font-weight: 400; }
 
-  .navbar-wrapper.mobile-only + .page-wrapper > section:first-of-type {
-    padding-top: 95px; } }
-@media (max-width: 1023px) {
-  .desktop-only {
-    display: none !important; } }
-@media (min-width: 600px) {
+  #beta-signup .item:nth-child(1) {
+    position: relative; }
+
+  #beta-signup .item:nth-child(1)::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5%;
+    left: -100vw;
+    width: 300vw;
+    height: 46%;
+    background: #27EEAB;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='18' viewBox='0 0 100 18'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M61.82 18c3.47-1.45 6.86-3.78 11.3-7.34C78 6.76 80.34 5.1 83.87 3.42 88.56 1.16 93.75 0 100 0v6.16C98.76 6.05 97.43 6 96 6c-9.59 0-14.23 2.23-23.13 9.34-1.28 1.03-2.39 1.9-3.4 2.66h-7.65zm-23.64 0H22.52c-1-.76-2.1-1.63-3.4-2.66C11.57 9.3 7.08 6.78 0 6.16V0c6.25 0 11.44 1.16 16.14 3.42 3.53 1.7 5.87 3.35 10.73 7.24 4.45 3.56 7.84 5.9 11.31 7.34zM61.82 0h7.66a39.57 39.57 0 0 1-7.34 4.58C57.44 6.84 52.25 8 46 8S34.56 6.84 29.86 4.58A39.57 39.57 0 0 1 22.52 0h15.66C41.65 1.44 45.21 2 50 2c4.8 0 8.35-.56 11.82-2z'%3E%3C/path%3E%3C/svg%3E"); }
+
+  #beta-signup .item:nth-child(2)::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: -100vw;
+    width: 300vw;
+    height: 140%;
+    background: #27EEAB; }
+
+  #beta-signup .item:nth-child(2) .inner {
+    position: relative;
+    z-index: 1;
+    margin-top: -80px;
+    margin-bottom: 30px; }
+
+  #beta-signup .item:nth-child(2) .inner::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: -30px;
+    width: calc(100% + 60px);
+    height: 130%;
+    background: white;
+    z-index: -1;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 5px; }
+
+  #for-webshops {
+    padding-top: 50px;
+    padding-bottom: 100px; } }
+/*------------------------- TABLET CSS AND SMALLER ---------------------------*/
+/*------------------------- TABLET ONLY ---------------------------*/
+@media screen and (max-width: 1023px) and (min-width: 750px) {
+  h1 {
+    font-size: 29px !important; }
+
+  #for-webshops {
+    position: relative;
+    z-index: 1;
+    margin-top: -150px; } }
+@media (min-width: 750px) {
+  /*------------------------- MOBILE ONLY ---------------------------*/
+  .mobile-only {
+    display: none !important; }
+
   /*------------------------- FONTS ---------------------------*/
   h1 {
     font-size: 45px;
@@ -354,6 +440,10 @@ input, input[type="submit"], .mc4wp-form-fields {
   section {
     padding: 50px 0; }
 
+  .container, .banner {
+    padding-left: 50px;
+    padding-right: 50px; }
+
   .flex-wrapper {
     flex-direction: row; }
 
@@ -368,14 +458,16 @@ input, input[type="submit"], .mc4wp-form-fields {
 
   .bg-square::before {
     content: "";
-    background: #27EEAB;
+    background: #0fba80;
     width: 300vw;
     height: 65%;
-    background: #27EEAB;
     position: absolute;
     left: -100vw;
     top: 15%;
     z-index: -1; }
+
+  .overlap-top {
+    margin-top: -200px; }
 
   /*------------------------- HERO ---------------------------*/
   .hero {
@@ -441,14 +533,14 @@ input, input[type="submit"], .mc4wp-form-fields {
     z-index: -1; }
 
   .inline-submit:hover::after {
-    right: -26px; } }
-@media (min-width: 1024px) {
-  /*------------------------- MOBILE ONLY ---------------------------*/
-  .mobile-only {
-    display: none !important; }
+    right: -26px; }
 
   /*------------------------- NAVBAR ---------------------------*/
   .navbar-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10px;
     padding-top: 20px;
     padding-bottom: 10px;
     display: flex;
@@ -458,8 +550,4 @@ input, input[type="submit"], .mc4wp-form-fields {
 
   .navbar-wrapper a.logo {
     max-width: 200px;
-    margin: 0; }
-
-  /*------------------------- SECTION: BETA SIGNUP ---------------------------*/
-  #beta-signup.hero {
-    background: none; } }
+    margin: 0; } }

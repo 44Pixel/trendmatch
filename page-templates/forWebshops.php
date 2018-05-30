@@ -4,11 +4,10 @@
 
 <div class="page-wrapper">
 	
-	<section class="hero">
+	<section id="webshops" class="hero">
 		<div class="banner color-bg white-text">
 			<div class="inner center-content">
 				<h1>Nå din målgruppe i den næste store salgskanal</h1>
-				<p>Vi søger de første 100 testere, til en lukket beta. Deltagere vil være blandt de første der kan downloade og benytte app'en.</p>
 				<div class="notice">
 					<h3>Send en mail til</h3>
 					<a href="mail-to:simon@trendmatch.dk">simon@trendmatch.dk</a>

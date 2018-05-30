@@ -49,7 +49,7 @@
 		
 		<div class="navbar-wrapper container mobile-only">
 			<a class="logo" href="/">
-				<img src="/wp-content/uploads/2018/05/trendmatch-logo-white.png">	
+				<img src="/wp-content/uploads/2018/05/trendmatch-logo-color.png">	
 			</a>
 		</div>
 		<!-- NAV BAR ENDS -->
