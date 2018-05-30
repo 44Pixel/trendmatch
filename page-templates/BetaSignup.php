@@ -38,7 +38,7 @@
 	<section id="for-webshops" class="overlap-top">
 		<div class="container center-content">
 			<h3>Har du en webshop?</h3>
-			<a href="/for-webshops" class="underline-hover">Læs mere her</a>
+			<a href="<?php echo get_permalink( get_page_by_path( 'For webshops' ) ) ?>" class="underline-hover">Læs mere her</a>
 		</div>
 	</section>
 	
