@@ -5,7 +5,7 @@
 <div class="page-wrapper">
 	<section id="beta-signup" class="hero">
 		<div class="container">
-			<div class="flex-wrapper col2 align-middle img-right bg-square white-text">
+			<div class="flex-wrapper col2 align-middle img-right">
 				<div class="item">
 					<div class="inner">
 						<h1 class="mobile-only">Vær med til at bygge den næste mode-app</h1>
@@ -21,14 +21,16 @@
 						</div>
 					</div>
 				</div>
-				<div class="item" id="beta-signup-form">
+				<div class="item bg-square bg-sq-no-mobile bg-sq-full-width bg-sq-white-text" id="beta-signup-form">
 					<div class="inner">
 						<h1 class="desktop-only">Vær med til at bygge den næste mode-app</h1>
 						<div class="beta-signup-form-wrapper">	
 							<h3>Bliv beta tester</h3>
 							<?php echo do_shortcode('[mc4wp_form id="11"]') ?>	
 						</div>
-						<p>Vi søger de første 100 testere, til en lukket beta. Deltagere vil være blandt de første der kan <strong>downloade og benytte app'en</strong>.</p>
+						<h4>Hvad vil det sige at være beta tester?</h4>
+						<p class="small">Som tester modtager du et link til at downloade app'en, hvilket kræver en iPhone. Du siger samtidig ja til at hjælpe med at udvikle app'en, hvilket indebærer at du modtager invitationer til at give feedback, samt opdateringer på mail.</p>
+						<p class="small">Ønsker du ikke længere at modtage disse mails kan du altid framelde dem. Du vil fortsat kunne benytte appen, selvom vi vil være kede af at miste din feedback. Du kan læse mere om hvordan vi håndtere din data <a target="_blank" href="/persondatapolitik">her</a>.</p>
 					</div>
 				</div>
 			</div>

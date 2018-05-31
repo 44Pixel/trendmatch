@@ -12,6 +12,7 @@ $colorSecondary: #f72863;
 $colorSecondary2: darken($colorSecondary,15%);
 $colorDark: #0c0b0c;
 $colorDark2: #808080;
+$colorLight: #f4f4f4;
 $padding: 16px;
 
 $widthMain: 1200px;
@@ -23,7 +24,7 @@ $breakpointMobile: 750px;
 h1, h2, h3, h4, h6, label, input[type="submit"], .navbar-wrapper li a {
 	font-family: $fontMain;
 }
-p, input, #mc_embed_signup div.response, a {
+p, input, #mc_embed_signup div.response, a,li {
 	font-family: $fontSecondary
 }
 h1 {
@@ -45,6 +46,13 @@ h3 {
 	color: $colorDark;
 	margin-bottom: 20px;
 }
+h4 {
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+h4 + p {
+	margin-top: 0;
+}
 html, body, p {
 	font-size: 16px;
 	font-weight: 300;
@@ -53,6 +61,9 @@ html, body, p {
 }
 p:not(:last-of-type) {
 	margin-bottom: 20px;
+}
+p.small {
+	font-size: 14px;
 }
 a {
 	font-size: 16px;
@@ -70,6 +81,18 @@ label {
 	margin-bottom: 5px;
 	color: $colorDark;
 }
+ol {
+	padding-left: 12px;
+}
+li {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-weight: 400;
+}
+ol > li {
+	font-weight: 500;
+}
+
 .white-text {
 	h1,h2,h3,h4,h5,html,body,p,a,label {
 		color: white;
@@ -152,10 +175,32 @@ input[type="submit"]:hover {
     bottom: 0px;
 	opacity: 1;
 }
-/*------------------------- SECTION STYLING ---------------------------*/
+/*------------------------- SITE WRAPPER ---------------------------*/
 .site-wrapper {
+	min-height: 100vh;
+    position: relative;
 	overflow: hidden;
 }
+/*------------------------- BG SQUARE ---------------------------*/
+.bg-square {
+position: relative;
+}
+.bg-square::before {
+	content: "";
+	background: $colorMain2;
+	width: 100%;
+	height: 120%;
+	position: absolute;
+	left: 0;
+	top: -15%;
+	z-index: -1;
+}
+.bg-sq-full-width::before {
+	left: -100vw;
+	width: 300vw;
+}
+
+/*------------------------- SECTION STYLING ---------------------------*/
 section {
 	box-sizing: border-box;
 }
@@ -283,6 +328,7 @@ section {
 	display: block;
 	float: left;
 	padding-left: 50px;
+	margin: 0;
 }
 .navbar-wrapper li a {
 	text-decoration: none;
@@ -338,23 +384,51 @@ input, input[type="submit"], .mc4wp-form-fields {
 	margin-top: 40px;
 	margin-bottom: 70px;
 }
-#beta-signup .item:nth-child(2)::before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: -20px;
-	left: -100vw;
-	width: 300vw;
-	height: 130%;
-	background: white;
-}
-#beta-signup .item:nth-child(2) > .inner{
-	position: relative;
-}
 .beta-signup-form-wrapper {
 	margin: 40px auto 0;
 	text-align: left;
 }
+/*------------------------- FOOTER ---------------------------*/
+footer {
+	background: $colorLight;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	position: relative;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	
+	a,p {
+		margin: 0;
+		text-align: center;
+		font-size: 14px;
+	}
+	a {
+		color: inherit;
+	}
+	a:hover {
+		color: $colorMain2;
+	}
+	span {
+		display: block;
+	}
+	.break {
+		visibility: hidden;
+	}
+	::after {
+		content: "";
+		display: block;
+		width: 100%;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		background: #f4f4f4;
+		position: absolute;
+		z-index: -1;
+	}
+}
+
 /*------------------------- RESPONSIVE ---------------------------*/
 
 /*------------------------- MOBILE CSS ONLY ---------------------------*/
@@ -362,6 +436,13 @@ input, input[type="submit"], .mc4wp-form-fields {
 	/*------------------------- DESKTOP ONLY ---------------------------*/
 	.desktop-only {
 		display: none!important;
+	}
+	/*------------------------- FONTS ---------------------------*/
+	ul, li {
+		padding-left: 0;
+	}
+	li ul li ul {
+		padding-left: 20px;
 	}
 	/*------------------------- FOR WEBSHOPS ---------------------------*/
 	#webshops .banner {
@@ -404,8 +485,8 @@ input, input[type="submit"], .mc4wp-form-fields {
 		top: -20px;
 		left: -100vw;
 		width: 300vw;
-		height: 140%;
-		background: #27EEAB;
+		height: 120%;
+		background: $colorMain;
 	}
 	#beta-signup .item:nth-child(2) .inner {
 		position: relative;
@@ -417,10 +498,10 @@ input, input[type="submit"], .mc4wp-form-fields {
 		content: "";
 		display: block;
 		position: absolute;
-		top: -20px;
+		top: -5%;
 		left: -30px;
 		width: calc(100% + 60px);
-		height: 130%;
+		height: 115%;
 		background: white;
 		z-index: -1;
 		box-shadow: 0 2px 15px rgba(0,0,0,.3);
@@ -428,7 +509,7 @@ input, input[type="submit"], .mc4wp-form-fields {
 	}
 	#for-webshops {
 		padding-top: 50px;
-		padding-bottom: 100px;
+		padding-bottom: 50px;
 	}
 }
 /*------------------------- TABLET CSS AND SMALLER ---------------------------*/
@@ -443,12 +524,14 @@ input, input[type="submit"], .mc4wp-form-fields {
 	#for-webshops {
 		position: relative;
 		z-index: 1;
-		margin-top: -150px;
+		margin-top: -100px;
+	}
+	.bg-square::before {
+		top: -10%;
 	}
 }
-
+/*------------------------- MOBILE AND BIGGER ---------------------------*/
 @media(min-width: $breakpointMobile) {
-	/*------------------------- MOBILE ONLY ---------------------------*/
 	.mobile-only {
 		display: none!important;
 	}
@@ -465,6 +548,17 @@ input, input[type="submit"], .mc4wp-form-fields {
 	h3 {
 		margin-bottom: 0;
 		margin-top: 40px;
+	}
+	.bg-sq-white-text.bg-sq-no-mobile {
+		h1,h2,h3,h4,h5,html,body,p,a,label {
+			color: white;
+		}
+		p,a:not(.button) {
+			font-weight: 500;
+		}
+		a:hover {
+			opacity: .9;
+		}
 	}
 	/*------------------------- SPLASH ---------------------------*/
 	.splash {
@@ -487,21 +581,8 @@ input, input[type="submit"], .mc4wp-form-fields {
 	.flex-wrapper.col2 > .item {
 		width: 50%;
 	}
-	.bg-square {
-	position: relative;
-	}
-	.bg-square::before {
-		content: "";
-		background: $colorMain2;
-		 width: 300vw;
-		height: 65%;
-		position: absolute;
-		left: -100vw;
-		top: 15%;
-		z-index: -1;
-	}
 	.overlap-top {
-		margin-top: -200px;
+		margin-top: -150px;
 	}
 	/*------------------------- HERO ---------------------------*/
 	.hero {
@@ -512,15 +593,8 @@ input, input[type="submit"], .mc4wp-form-fields {
 		margin-right: -55px;
 	}
 	/*------------------------- SECTION: BETA SIGNUP ---------------------------*/
-	#beta-signup h1 {
-		margin-top: -40px;
-	}
-	#beta-signup .item:nth-child(2)::before {
-		content: none;
-	}
 	#beta-signup .item:nth-child(2){
 		margin-bottom: 0;
-		position: static;
 		margin-top: 0;
 		order: -1;
 	}
@@ -537,6 +611,7 @@ input, input[type="submit"], .mc4wp-form-fields {
 	.inline-submit {
 		width: 40px;
 		height: 40px;
+		min-width: 40px;
 		border-radius: 50%;
 		border: solid white 2px;
 		margin-left: 15px;
@@ -586,6 +661,19 @@ input, input[type="submit"], .mc4wp-form-fields {
 		max-width: 200px;
 		margin: 0;
 	}
+	/*------------------------- FOOTER ---------------------------*/
+	footer{
+		padding-top: 10px;
+		padding-bottom: 20px;
+		span {
+			display: inline;
+		}
+		
+		.break {
+			visibility: visible;
+		}
+	}
+	
 }
 
 @media(min-width: $breakpointTablet) {
