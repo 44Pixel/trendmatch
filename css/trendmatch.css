@@ -153,11 +153,17 @@ input[type="submit"]:hover {
   bottom: 0px;
   opacity: 1; }
 
-/*------------------------- SITE WRAPPER ---------------------------*/
+/*------------------------- SITE WRAPPER / PAGE WRAPPER ---------------------------*/
 .site-wrapper {
   min-height: 100vh;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  background: #f4f4f4; }
+
+.page-wrapper {
+  background: white;
+  position: relative;
+  z-index: 0; }
 
 /*------------------------- BG SQUARE ---------------------------*/
 .bg-square {
@@ -278,7 +284,10 @@ section {
   width: 100%;
   box-sizing: border-box;
   padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  position: relative;
+  z-index: 9;
+  background: white; }
 
 .navbar-wrapper a.logo {
   display: block;
@@ -385,16 +394,6 @@ footer {
     display: block; }
   footer .break {
     visibility: hidden; }
-  footer ::after {
-    content: "";
-    display: block;
-    width: 100%;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    background: #f4f4f4;
-    position: absolute;
-    z-index: -1; }
 
 /*------------------------- RESPONSIVE ---------------------------*/
 /*------------------------- MOBILE CSS ONLY ---------------------------*/
