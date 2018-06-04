@@ -47,8 +47,30 @@ $(document).ready(function() {
   });
 	
 	
-
 	
+	// Add UTM parameters to form
+	
+	// Parse the URL
+	function getParameterByName(name) {
+		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+			results = regex.exec(location.search);
+		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
+	// Give the URL parameters variable names
+	var source = getParameterByName('utm_source');
+	var medium = getParameterByName('utm_medium');
+	var campaign = getParameterByName('utm_campaign');
+	var term = getParameterByName('utm_term');
+	var content = getParameterByName('utm_content');
+	
+	// Set the value of each field equal to the utm paramters
+	$('input[name="SOURCE"]').attr('value',source);
+	$('input[name="MEDIUM"]').attr('value',medium);
+	$('input[name="CAMPAIGN"]').attr('value',campaign);
+	$('input[name="TERM"]').attr('value',term);
+	$('input[name="CONTENT"]').attr('value',content);
+	// UTM PARAMTER FUNCTION ENDS
 	
 	
 });	
