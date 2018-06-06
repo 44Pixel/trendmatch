@@ -4,17 +4,37 @@ html, body {
 
 /*------------------------- VARIABLES---------------------------*/
 /*------------------------- FONTS ---------------------------*/
-h1, h2, h3, h4, h6, label, input[type="submit"] {
+h1, h2, h3, h4, h6, label, input[type="submit"], .navbar-wrapper li a {
   font-family: Poppins, Montserrat, sans-serif; }
 
-p, input, #mc_embed_signup div.response, a {
+p, input, #mc_embed_signup div.response, a, li {
   font-family: Montserrat, Poppins, sans-serif; }
+
+h1 {
+  font-size: 45px;
+  font-weight: 400;
+  color: #0c0b0c;
+  margin-bottom: 20px;
+  line-height: 1.4; }
 
 h2 {
   font-size: 22px;
   font-weight: 500;
-  color: red;
+  color: #0c0b0c;
   margin-bottom: 20px; }
+
+h3 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #0c0b0c;
+  margin-bottom: 20px; }
+
+h4 {
+  font-weight: 600;
+  margin-bottom: 5px; }
+
+h4 + p {
+  margin-top: 0; }
 
 html, body, p {
   font-size: 16px;
@@ -24,6 +44,9 @@ html, body, p {
 
 p:not(:last-of-type) {
   margin-bottom: 20px; }
+
+p.small {
+  font-size: 14px; }
 
 a {
   font-size: 16px;
@@ -41,6 +64,24 @@ label {
   margin-bottom: 5px;
   color: #0c0b0c; }
 
+ol {
+  padding-left: 12px; }
+
+li {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 400; }
+
+ol > li {
+  font-weight: 500; }
+
+.white-text h1, .white-text h2, .white-text h3, .white-text h4, .white-text h5, .white-text html, .white-text body, .white-text p, .white-text a, .white-text label {
+  color: white; }
+.white-text p, .white-text a:not(.button) {
+  font-weight: 500; }
+.white-text a:hover {
+  opacity: .9; }
+
 /*------------------------- CTAS & BUTTONS ---------------------------*/
 input[type="submit"] {
   letter-spacing: .7px;
@@ -56,41 +97,160 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background: #cb083f; }
 
-/*------------------------- LOGO WRAPPER ---------------------------*/
-.logo-wrapper {
-  margin-bottom: 20px; }
-
-.logo-wrapper img.logo {
-  width: 45px;
+.button {
+  margin: auto;
   display: block;
-  margin: 0 auto 5px; }
-
-.logo-wrapper h1.logo {
+  max-width: 400px;
+  width: 100%;
+  height: 45px;
+  box-sizing: border-box;
+  cursor: pointer;
+  line-height: 45px;
+  text-decoration: none;
   text-align: center;
-  font-size: 14px;
-  font-weight: 600;
-  margin: 0;
-  text-shadow: none;
-  color: #0c0b0c; }
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+.button:last-of-type {
+  margin-top: -10px; }
+
+.button.rounded {
+  border-radius: 25px; }
+
+.button.full {
+  background: #27EEAB;
+  color: white;
+  font-weight: 600; }
+
+.button.full:hover {
+  background: #0fba80; }
+
+.button.ghost {
+  color: #0fba80;
+  border: solid 1px; }
+
+.button.ghost:hover {
+  background: rgba(255, 255, 255, 0.2); }
+
+.underline-hover:hover, .navbar-wrapper li a:hover {
+  color: #09734f; }
+
+.underline-hover, .navbar-wrapper li a {
+  position: relative;
+  text-decoration: none; }
+
+.underline-hover::after, .navbar-wrapper li a::after {
+  content: "";
+  width: 100%;
+  border-bottom: solid 1px;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  opacity: 0;
+  transition: .3s; }
+
+.underline-hover:hover::after, .navbar-wrapper li a:hover::after {
+  bottom: 0px;
+  opacity: 1; }
+
+/*------------------------- SITE WRAPPER / PAGE WRAPPER ---------------------------*/
+.site-wrapper {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: #f4f4f4; }
+
+.page-wrapper {
+  background: white;
+  position: relative;
+  z-index: 0; }
+
+/*------------------------- BG SQUARE ---------------------------*/
+.bg-square {
+  position: relative; }
+
+.bg-square::before {
+  content: "";
+  background: #0fba80;
+  width: 100%;
+  height: 120%;
+  position: absolute;
+  left: 0;
+  top: -15%;
+  z-index: -1; }
+
+.bg-sq-full-width::before {
+  left: -100vw;
+  width: 300vw; }
 
 /*------------------------- SECTION STYLING ---------------------------*/
+section {
+  box-sizing: border-box; }
+
 .container {
   width: 100%;
-  max-width: 1100px;
-  margin: auto; }
+  max-width: 1200px;
+  margin: auto;
+  box-sizing: border-box;
+  padding-left: 10%;
+  padding-right: 10%; }
 
 .container.wide {
-  max-width: 1300px; }
+  max-width: 1400px; }
 
-.center-content {
-  text-align: center; }
+.banner {
+  padding: 50px 0;
+  box-sizing: border-box;
+  padding-left: 10%;
+  padding-right: 10%; }
+
+.banner > .inner {
+  margin: auto;
+  max-width: 550px; }
+
+.notice {
+  padding: 20px 20px 30px;
+  box-sizing: border-box;
+  background: #09734f;
+  margin-top: 50px; }
+
+.notice h3 {
+  margin-top: 0; }
+
+.partners {
+  padding-top: 0; }
+
+.partners img {
+  margin-top: 40px;
+  max-width: 250px; }
+
+.color-bg {
+  background: #0fba80; }
+
+.full-height {
+  min-height: 100vh; }
 
 .flex-wrapper {
-  display: flex; }
+  display: flex;
+  flex-direction: column; }
 
-.flex-wrapper.col3 > .item {
-  width: 33.3333%; }
+.flex-wrapper .item {
+  width: 100%;
+  box-sizing: border-box; }
 
+/*------------------------- ALIGNMENT ---------------------------*/
+.center-content {
+  text-align: center; }
+  .center-content input, .center-content input[type="submit"], .center-content .mc4wp-form-fields, .center-content .mc4wp-response {
+    margin: auto; }
+
+.content-right {
+  margin-left: auto; }
+
+.align-middle {
+  align-items: center; }
+
+/*------------------------- HERO ---------------------------*/
 /*------------------------- ÍMAGES + MOCKUP ---------------------------*/
 .mockup {
   width: 100%;
@@ -101,16 +261,63 @@ input[type="submit"]:hover {
 
 .mockup .content {
   position: absolute;
-  width: 69%;
+  width: 68.8%;
   height: 68.6%;
-  background: red;
   top: 10.7%;
-  left: 14.4%;
+  left: 14.5%;
   border-radius: 3px;
   overflow: hidden; }
 
 .mockup .content.video video {
   width: 100%; }
+
+.mockup.iphone-portrait .content.video video {
+  width: 102.5%;
+  margin-top: -5.7%; }
+
+.mockup.iphone-portrait {
+  max-width: 400px;
+  margin: auto; }
+
+/*------------------------- NAVBAR ---------------------------*/
+.navbar-wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  z-index: 9;
+  background: white; }
+
+.navbar-wrapper a.logo {
+  display: block;
+  width: 100%;
+  max-width: 100px;
+  margin: auto; }
+
+.navbar-wrapper a.logo img {
+  display: block;
+  width: 100%; }
+
+.navbar-wrapper.mobile-only a.logo img {
+  width: auto;
+  height: 70px;
+  margin: auto; }
+
+.navbar-wrapper ul {
+  margin: 0; }
+
+.navbar-wrapper li {
+  list-style: none;
+  display: block;
+  float: left;
+  padding-left: 50px;
+  margin: 0; }
+
+.navbar-wrapper li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
 
 /*------------------------- SPLASH ---------------------------*/
 .splash {
@@ -134,91 +341,175 @@ input {
   border-color: #808080;
   border-width: 1px;
   height: 40px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  max-width: 360px; }
 
 input:hover {
   border-color: #0c0b0c; }
 
-input:not(:last-of-type) {
-  margin: 0 auto 20px;
-  max-width: 360px; }
+input:not(:first-of-type):not(.inline-submit) {
+  margin-top: 20px; }
 
 input, input[type="submit"], .mc4wp-form-fields {
-  width: 100%;
-  max-width: 360px;
-  margin: auto;
-  display: block; }
-
-#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
-  margin-top: 3px !important; }
-
-#mc_embed_signup div#mce-responses {
-  float: none;
-  text-align: center;
-  margin: -20px auto 20px;
-  width: 100%;
-  padding: 0; }
-
-#mc_embed_signup div.response {
-  float: none;
-  margin: 0 auto; }
-
-span.wpcf7-not-valid-tip, #mc_embed_signup div.mce_inline_error, #mce-success-response {
-  position: static;
-  margin: auto !important;
-  font-weight: 500 !important;
-  color: #808080; }
+  width: 100%; }
 
 .mc4wp-response {
-  text-align: center;
   margin-top: 20px; }
 
 .mc4wp-response p {
-  font-weight: 500; }
+  font-weight: 500 !important; }
+
+.inline-submit {
+  margin-top: 20px; }
 
 /*------------------------- SECTION: BETA SIGNUP ---------------------------*/
-#beta-signup.hero {
-  background: white;
-  background-size: cover;
-  min-height: 100vh;
-  box-sizing: border-box; }
+#beta-signup .item:nth-child(2) {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 70px; }
 
 .beta-signup-form-wrapper {
-  margin: 60px auto 0;
+  margin: 40px auto 0;
   text-align: left; }
 
-#beta-signup .top-wrapper {
-  background: url(/wp-content/uploads/2018/05/trendmatch-bg-03.jpg);
-  background-size: cover;
+/*------------------------- FOOTER ---------------------------*/
+footer {
+  background: #f4f4f4;
+  padding-top: 30px;
+  padding-bottom: 30px;
   position: relative;
-  padding: 15px 16px 50px;
-  margin: -15px -16px 40px; }
-
-#beta-signup .top-wrapper > .inner {
-  position: relative; }
-
-#beta-signup .top-wrapper::before {
-  content: "";
-  background: white;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
   left: 0;
-  opacity: .7; }
-
-#beta-signup .bottom-wrapper {
-  margin: -16px;
-  padding: 0 16px;
-  box-sizing: border-box;
-  background: white; }
+  bottom: 0;
+  width: 100%;
+  text-align: center; }
+  footer a, footer p {
+    margin: 0;
+    text-align: center;
+    font-size: 14px; }
+  footer a {
+    color: inherit; }
+  footer a:hover {
+    color: #0fba80; }
+  footer span {
+    display: block; }
+  footer .break {
+    visibility: hidden; }
 
 /*------------------------- RESPONSIVE ---------------------------*/
-@media (min-width: 600px) {
+/*------------------------- MOBILE CSS ONLY ---------------------------*/
+@media (max-width: 749px) {
+  /*------------------------- DESKTOP ONLY ---------------------------*/
+  .desktop-only {
+    display: none !important; }
+
   /*------------------------- FONTS ---------------------------*/
+  ul, li {
+    padding-left: 0; }
+
+  li ul li ul {
+    padding-left: 20px; }
+
+  /*------------------------- FOR WEBSHOPS ---------------------------*/
+  #webshops .banner {
+    padding-top: 20px; }
+
+  #webshops .banner .center-content h1 {
+    text-align: left; }
+
+  #partners {
+    padding-bottom: 70px; }
+
+  /*------------------------- MISC ---------------------------*/
+  #beta-signup h1, #beta-signup h3 {
+    color: #0c0b0c; }
+  #beta-signup p {
+    color: #808080;
+    font-weight: 400; }
+
+  #beta-signup .item:nth-child(1) {
+    position: relative; }
+
+  #beta-signup .item:nth-child(1)::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5%;
+    left: -100vw;
+    width: 300vw;
+    height: 46%;
+    background: #27EEAB;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='18' viewBox='0 0 100 18'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M61.82 18c3.47-1.45 6.86-3.78 11.3-7.34C78 6.76 80.34 5.1 83.87 3.42 88.56 1.16 93.75 0 100 0v6.16C98.76 6.05 97.43 6 96 6c-9.59 0-14.23 2.23-23.13 9.34-1.28 1.03-2.39 1.9-3.4 2.66h-7.65zm-23.64 0H22.52c-1-.76-2.1-1.63-3.4-2.66C11.57 9.3 7.08 6.78 0 6.16V0c6.25 0 11.44 1.16 16.14 3.42 3.53 1.7 5.87 3.35 10.73 7.24 4.45 3.56 7.84 5.9 11.31 7.34zM61.82 0h7.66a39.57 39.57 0 0 1-7.34 4.58C57.44 6.84 52.25 8 46 8S34.56 6.84 29.86 4.58A39.57 39.57 0 0 1 22.52 0h15.66C41.65 1.44 45.21 2 50 2c4.8 0 8.35-.56 11.82-2z'%3E%3C/path%3E%3C/svg%3E"); }
+
+  #beta-signup .item:nth-child(2)::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: -100vw;
+    width: 300vw;
+    height: 120%;
+    background: #27EEAB; }
+
+  #beta-signup .item:nth-child(2) .inner {
+    position: relative;
+    z-index: 1;
+    margin-top: -80px;
+    margin-bottom: 30px; }
+
+  #beta-signup .item:nth-child(2) .inner::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5%;
+    left: -30px;
+    width: calc(100% + 60px);
+    height: 115%;
+    background: white;
+    z-index: -1;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 5px; }
+
+  #for-webshops {
+    padding-top: 50px;
+    padding-bottom: 50px; } }
+/*------------------------- TABLET CSS AND SMALLER ---------------------------*/
+/*------------------------- TABLET ONLY ---------------------------*/
+@media screen and (max-width: 1023px) and (min-width: 750px) {
+  h1 {
+    font-size: 29px !important; }
+
+  #for-webshops {
+    position: relative;
+    z-index: 1;
+    margin-top: -100px; }
+
+  .bg-square::before {
+    top: -10%; } }
+/*------------------------- MOBILE AND BIGGER ---------------------------*/
+@media (min-width: 750px) {
+  .mobile-only {
+    display: none !important; }
+
+  /*------------------------- FONTS ---------------------------*/
+  h1 {
+    font-size: 45px;
+    margin-bottom: 45px;
+    margin-top: 0; }
+
   h2 {
     font-size: 36px;
     margin-bottom: 40px; }
+
+  h3 {
+    margin-bottom: 0;
+    margin-top: 40px; }
+
+  .bg-sq-white-text.bg-sq-no-mobile h1, .bg-sq-white-text.bg-sq-no-mobile h2, .bg-sq-white-text.bg-sq-no-mobile h3, .bg-sq-white-text.bg-sq-no-mobile h4, .bg-sq-white-text.bg-sq-no-mobile h5, .bg-sq-white-text.bg-sq-no-mobile html, .bg-sq-white-text.bg-sq-no-mobile body, .bg-sq-white-text.bg-sq-no-mobile p, .bg-sq-white-text.bg-sq-no-mobile a, .bg-sq-white-text.bg-sq-no-mobile label {
+    color: white; }
+  .bg-sq-white-text.bg-sq-no-mobile p, .bg-sq-white-text.bg-sq-no-mobile a:not(.button) {
+    font-weight: 500; }
+  .bg-sq-white-text.bg-sq-no-mobile a:hover {
+    opacity: .9; }
 
   /*------------------------- SPLASH ---------------------------*/
   .splash {
@@ -228,28 +519,103 @@ span.wpcf7-not-valid-tip, #mc_embed_signup div.mce_inline_error, #mce-success-re
   section {
     padding: 50px 0; }
 
+  .container, .banner {
+    padding-left: 50px;
+    padding-right: 50px; }
+
+  .flex-wrapper {
+    flex-direction: row; }
+
+  .flex-wrapper.col3 > .item {
+    width: 33.3333%; }
+
+  .flex-wrapper.col2 > .item {
+    width: 50%; }
+
+  .overlap-top {
+    margin-top: -150px; }
+
+  /*------------------------- HERO ---------------------------*/
+  .hero {
+    padding-top: 120px; }
+
+  /*------------------------- ÍMAGES + MOCKUP ---------------------------*/
+  .content-right.mockup.iphone-portrait {
+    margin-right: -55px; }
+
   /*------------------------- SECTION: BETA SIGNUP ---------------------------*/
-  #beta-signup.hero {
-    background: url(/wp-content/uploads/2018/05/trendmatch-bg-03.jpg); }
+  #beta-signup .item:nth-child(2) {
+    margin-bottom: 0;
+    margin-top: 0;
+    order: -1; }
 
   .beta-signup-form-wrapper {
-    margin: 30px auto 70px; }
-
-  #beta-signup .top-wrapper {
-    background: none;
-    padding: 0;
-    margin: 0; }
-
-  /*------------------------- LOGO WRAPPER ---------------------------*/
-  .logo-wrapper {
-    margin-bottom: 30px; }
-
-  .logo-wrapper img.logo {
-    width: 90px; }
-
-  .logo-wrapper h1.logo {
-    font-size: 20px; }
+    margin: 30px auto 40px; }
 
   /*------------------------- FORMS & INPUT ---------------------------*/
-  .mc-field-group, input:not(:last-of-type) {
-    margin: 0 auto 30px; } }
+  input:not(:first-of-type):not(.inline-submit) {
+    margin-top: 30px; }
+
+  .mc4wp-form-fields {
+    display: flex; }
+
+  .inline-submit {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    border: solid #27EEAB 2px;
+    margin-left: 15px;
+    box-sizing: border-box;
+    transition: .3s;
+    overflow: hidden;
+    margin-top: 0;
+    position: relative; }
+
+  .inline-submit input[type="submit"] {
+    color: transparent;
+    background: none; }
+
+  .inline-submit input[type="submit"]:focus {
+    outline: none; }
+
+  .inline-submit::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #27EEAB;
+    line-height: 40px;
+    font-family: fontawesome;
+    transition: .3s;
+    margin-top: -1px;
+    letter-spacing: 11px;
+    z-index: -1; }
+
+  .inline-submit:hover::after {
+    right: -26px; }
+
+  /*------------------------- NAVBAR ---------------------------*/
+  .navbar-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0; }
+
+  .navbar-wrapper a.logo {
+    max-width: 200px;
+    margin: 0; }
+
+  /*------------------------- FOOTER ---------------------------*/
+  footer {
+    padding-top: 10px;
+    padding-bottom: 20px; }
+    footer span {
+      display: inline; }
+    footer .break {
+      visibility: visible; } }

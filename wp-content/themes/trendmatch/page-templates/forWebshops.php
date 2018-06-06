@@ -10,14 +10,14 @@
 				<h1>Nå din målgruppe i den næste store salgskanal</h1>
 				<div class="notice">
 					<h3>Send en mail til</h3>
-					<a href="mail-to:simon@trendmatch.dk">simon@trendmatch.dk</a>
+					<a href="mailto:simon@trendmatch.dk">simon@trendmatch.dk</a>
 				</div>
 			</div>
 		</div>
 	</section>
 	<section id="partners" class="center-content partners">
 		<h3>Vores partnere</h3>
-		<a href="https://trendday.dk/" target="_blank"><img src="/wp-content/uploads/2018/05/Trendday-logo.svg"></a>
+		<a href="https://trendday.dk/" target="_blank"><img src="/wp-content/uploads/2018/05/Trendday-logo.svg" alt="Trenddays logo"></a>
 	</section>
 	
 </div>
